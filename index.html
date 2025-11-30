@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="app.css">
+    <title>new-project-javasscript</title>
+</head>
+
+<body class="bg-white">
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-40 hidden p-6 text-xl space-y-6 transform translate-x-full
+        transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">
+        <!--BUTTON-->
+        <button id="closeMenu" class="p-2 rounded-full hover:bg-gray-200 absolute top-6 right-6 text-3xl">
+            ✕
+        </button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="#" class="block font-medium text-center font-sans">Home</a>
+        <a href="#" class="block font-medium text-center font-sans">projects</a>
+        <a href="#" class="block font-medium text-center font-sans">about</a>
+        <a href="#" class="block font-medium text-center font-sans">contact</a>
+    </div>
+
+    <!-- HEADER -->
+    <header class="w-full sticky top-0 bg-white z-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Left: Menu + Logo -->
+                <div class="flex items-center space-x-4">
+                    <button id="menuBtn" class="p-2 rounded-full hover:bg-gray-100 md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" stroke="currentColor"
+                            stroke-width="3" fill="none">
+                            <line x1="4" y1="8" x2="28" y2="8" stroke-linecap="round" />
+                            <line x1="4" y1="16" x2="20" y2="16" stroke-linecap="round" />
+                            <line x1="4" y1="24" x2="14" y2="24" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <!--LOGO SITE -->
+                    <a href="index.html" class="text-2xl font-semibold">Mobino</a>
+                </div>
+
+                <!-- MOBILE LOGIN BUTTON -->
+                <button class="md:hidden px-4 py-2 bg-gray-900 text-white rounded-full font-medium">Log in</button>
+
+                <!-- DESKTOP SEARCH -->
+                <div class="hidden md:flex flex-1 justify-center px-10">
+                    <div class="w-full max-w-xl relative">
+                        <input id="search" type="text" placeholder="What are you looking for?"
+                            class="w-full py-3 pl-4 pr-12 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-black" />
+                        <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 105.65 5.65a7.5 7.5 0 0010.6 10.6z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Desktop NAVBAR -->
+                <nav class="hidden md:flex items-center space-x-6 text-gray-700 font-medium">
+                    <a href="#" class="hover:text-black transition-all duration-200 font-sans">home</a>
+                    <a href="#" class="hover:text-black transition-all duration-200 font-sans">projects</a>
+                    <a href="#" class="hover:text-black transition-all duration-200 font-sans">contact</a>
+                    <a href="#" class="hover:text-black transition-all duration-200 font-sans">about</a>
+                    <button
+                        class="px-5 py-2 bg-gray-900 text-white rounded-full hover:bg-black font-medium font-sans">Log
+                        in</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE SEARCH BAR -->
+    <div class="md:hidden w-full px-4 py-3 bg-white">
+        <div class="w-full relative">
+            <input type="text" id="search-mobile" placeholder="What are you looking for?"
+                class="w-full py-3 pl-4 pr-12 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-black" />
+            <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-blue-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 105.65 5.65a7.5 7.5 0 0010.6 10.6z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <main>
+        <br>
+        <div class="products" id="product-list"></div>
+        </div>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="bg-gray-50 text-black py-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+
+            <!-- LINKS-->
+            <div class="flex space-x-6 mb-4">
+                <a href="#" class="hover:text-gray-600 transition-colors">Home</a>
+                <a href="#" class="hover:text-gray-600 transition-colors">About</a>
+                <a href="#" class="hover:text-gray-600 transition-colors">Projects</a>
+                <a href="#" class="hover:text-gray-600 transition-colors">Contact</a>
+            </div>
+
+            <div class="text-sm text-gray-500">
+                &copy; 2025 Mobino. All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <!--ADDRES SCRIPT-->
+    <script src="app.js"></script>
+</body>
+
+</html>
