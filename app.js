@@ -55,7 +55,7 @@ function closeMenuFunc() {
 }
 
 menuBtn.addEventListener('click', () => {
-  menuBtn.classList.toggle('active'); // تغییر شکل به ✕
+  menuBtn.classList.toggle('active'); 
   if (mobileMenu.classList.contains('hidden')) {
     openMenu();
   } else {
@@ -64,6 +64,6 @@ menuBtn.addEventListener('click', () => {
 });
 
 closeMenu.addEventListener('click', () => {
-  menuBtn.classList.remove('active'); // برگرداندن شکل همبرگر
+  menuBtn.classList.remove('active');
   closeMenuFunc();
 });
